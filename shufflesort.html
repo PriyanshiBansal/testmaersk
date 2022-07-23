@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<body>
+<style> 
+ul {
+    margin: 0;
+    padding: 0;
+    min-height: 170px;
+}
+ul li {
+    list-style: none;
+    padding: 4rem 6rem;
+    margin: 0px -3px;
+    font-size: 5em;
+    display: inline-block;
+    color: #FFFFFF;
+    font-weight: 100;
+}
+.three,.five,.nine {
+    background: #6F98A8;
+}
+.two,.four {
+    background: #72C3DC;
+}
+.one,.eight {
+    background: #333333;
+}
+.six,.seven {
+    background: #2B8EAD;
+}
+.btn-shuffle,.btn-sort {
+    background: #72C3DC;
+    color: #fff;
+    border: 1px solid;
+    display: inline-block;
+    width: 100px;
+    position: relative;
+     border-radius: 5px;
+     padding: 10px;
+    margin: 15px;
+    }
+    @media screen and (max-width:376px) {
+    ul li {
+    list-style: none;
+    padding: 1rem 2rem;
+    margin: 0px -3px;
+    font-size: 5em;
+    display: block;
+    color: #000000;
+    font-weight: 100;
+    text-align:center;
+    }
+    .one,.two,.three,.four,.five,.six,.seven,.eight,.nine {
+        background: #efefef;
+        margin-bottom: 10px;
+    }
+ .three,.five,.nine {
+    border-left: 10px solid #6F98A8;
+}
+.two,.four {
+    border-left: 10px solid #72C3DC;
+}
+.one,.eight {
+    border-left: 10px solid #333333;
+}
+.six,.seven {
+    border-left: 10px solid #2B8EAD;
+}
+}
+</style>
+<script>
+function shuffleTheList() {
+var ul = document.querySelector("ul");
+for (var i=ul.children.length;i>=0;i--){
+ul.appendChild(ul.children[Math.random()*i |0]);
+}
+function sortTheList() {
+}
+}
+</script>
+<h1 style="background-color: red;">Hello!</h1>
+<p>This is Shuffling and sorting.</p>
+<button id="shuffle" type="button" class="btn-shuffle" onclick="shuffleTheList()">Shuffle</button>
+	<button type="button" onclick="sortTheList()" class="btn-sort" >Sort</button>
+<ul class="container">
+<li class="one">1</li>
+<li class="two">2</li>
+<li class="three">3</li>
+<li class="four">4</li>
+<li class="five">5</li>
+<li class="six">6</li>
+<li class="seven">7</li>
+<li class="eight">8</li>
+<li class="nine">9</li>
+</ul>
+
+
+</body>
+</html>
