@@ -79,9 +79,12 @@ ul.appendChild(ul.children[Math.random()*i |0]);
 };
 
 function sortTheList() {
-    const sortElements = [...document.querySelectorAll('li')]
+     const unsortedElements = document.querySelectorAll('li');
+    const sortedElements = [...unsortedElements]
         .sort((a, b) => Number(a.textContent) - Number(b.textContent));
-    document.getElementById("container").replaceWith(...sortElements);
+    unsortedElements.forEach((node, index) => {
+        node.replaceWith(sortedElements[index].cloneNode(true));
+    });
 };
 </script>
 	
